@@ -39,7 +39,7 @@ GOLD = "#f2cc60"
 # reveal timing (one-shot)
 COL_T = 0.018   # per-column delay contribution (left -> right sweep)
 ROW_T = 0.045   # per-row delay contribution (top -> bottom cascade)
-CELL_DUR = 0.42
+CELL_DUR = 0.25
 
 
 def level_for(count):
@@ -103,10 +103,10 @@ def render(data):
 
     css = f"""
 @keyframes cell {{
-  0%   {{ opacity: 0; transform: translateY(-6px); }}
-  100% {{ opacity: 1; transform: translateY(0); }}
+  0%   {{ opacity: 0; transform: scale(0.95) translateY(-6px); }}
+  100% {{ opacity: 1; transform: scale(1) translateY(0); }}
 }}
-.c {{ opacity: 0; animation: cell {CELL_DUR:.2f}s cubic-bezier(.2,.8,.2,1) both; }}
+.c {{ opacity: 0; animation: cell {CELL_DUR:.2f}s cubic-bezier(0.23, 1, 0.32, 1) both; }}
 """.strip()
 
     parts = [

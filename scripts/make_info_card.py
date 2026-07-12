@@ -70,11 +70,13 @@ def rise(inner, i):
     """fade + slight upward slide, staggered by row index; freezes visible."""
     if STATIC:
         return f"<g>{inner}</g>"
-    delay = 0.15 + i * 0.06
-    return (f'<g opacity="0" transform="translate(0,5)">{inner}'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{delay:.2f}s" dur="0.4s" fill="freeze"/>'
+    delay = 0.15 + i * 0.05
+    return (f'<g opacity="0" transform="translate(0,5) scale(0.98)">{inner}'
+            f'<animate attributeName="opacity" from="0" to="1" begin="{delay:.2f}s" dur="0.25s" fill="freeze"/>'
             f'<animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" '
-            f'begin="{delay:.2f}s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></g>')
+            f'begin="{delay:.2f}s" dur="0.25s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1" additive="sum"/>'
+            f'<animateTransform attributeName="transform" type="scale" from="0.98" to="1" '
+            f'begin="{delay:.2f}s" dur="0.25s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1" additive="sum"/></g>')
 
 
 parts = [
