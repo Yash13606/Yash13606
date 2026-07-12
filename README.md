@@ -1,21 +1,17 @@
 <!--
   This is your PROFILE README. It goes in a repo named exactly after your
   username (e.g. github.com/OCTOCAT/OCTOCAT) so GitHub shows it on your profile.
+  Replace the ALL-CAPS placeholders. Widths 370/490 keep the portrait and info
+  card the same height -- if you change the info card's H, re-match these.
 -->
 <div align="center">
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="portrait.svg">
-    <source media="(prefers-color-scheme: light)" srcset="portrait.svg">
-    <img alt="Portrait" width="370" src="portrait.svg">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="info-card.svg">
-    <source media="(prefers-color-scheme: light)" srcset="info-card.svg">
-    <img alt="Info Card" width="490" src="info-card.svg">
-  </picture>
-</p>
+<table>
+<tr>
+<td valign="top"><img src="./avi-ascii.svg" width="370" alt="ASCII portrait" /></td>
+<td valign="top"><img src="./info-card.svg" width="490" alt="Experience, stack, highlights" /></td>
+</tr>
+</table>
 
 ## Yash A
 
@@ -27,10 +23,6 @@
 <br>
 
 <!-- animated contribution graph, refreshed daily by the workflow -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="contrib-heatmap.svg">
-  <source media="(prefers-color-scheme: light)" srcset="contrib-heatmap.svg">
-  <img alt="Contribution Heatmap" width="872" src="contrib-heatmap.svg">
-</picture>
+<img src="./contrib-heatmap.svg" width="860" alt="GitHub contribution graph" />
 
 </div>
